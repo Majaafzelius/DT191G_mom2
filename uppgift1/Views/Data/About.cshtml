@@ -1,0 +1,23 @@
+﻿@model uppgift1.Models.AboutModel
+
+@{
+    ViewData["Title"] = "About";
+}
+
+<h1>About</h1>
+<div>
+    <p>
+        <p>Namn: @Model.First_Name @Model.Last_Name</p>
+        <p>Ålder: @Model.Age</p>
+        
+        @if (Model.Songs != null)
+        {
+            foreach (SongModel song in Model.Songs)
+            {
+                <p>Favoritlåt: @song.Name Av @song.Artist, Album: @song.Album, Släppt:  @song.ReleaseDate </p>
+            }
+            
+        }
+        
+    </p>
+</div>

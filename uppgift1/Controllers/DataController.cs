@@ -17,6 +17,20 @@ namespace uppgift1.Controllers
         {
             return View();
         }
+        
+        public IActionResult About()
+        {
+            List<SongModel> songModels = new List<SongModel>()
+            {
+                new SongModel {Name="Is it over now?", Artist="Taylor Swift", Album="1989(Taylors Version)", ReleaseDate=new DateTime(2023-10-31)}
+            };
+            AboutModel aboutModel = new AboutModel();
+            aboutModel.First_Name = "Maja";
+            aboutModel.Last_Name = "Afzelius";
+            aboutModel.Age = 23;
+            aboutModel.Songs = songModels;
+            return View(aboutModel);
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
