@@ -22,7 +22,7 @@ namespace uppgift1.Controllers
         {
             List<SongModel> songModels = new List<SongModel>()
             {
-                new SongModel {Name="Is it over now?", Artist="Taylor Swift", Album="1989(Taylors Version)", ReleaseDate=new DateTime(2023-10-31)}
+                new SongModel {Name="Is it over now?", Artist="Taylor Swift", Album="1989(Taylors Version)"}
             };
             AboutModel aboutModel = new AboutModel();
             aboutModel.First_Name = "Maja";
